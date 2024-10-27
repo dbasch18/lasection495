@@ -1,0 +1,23 @@
+def calculate_barber_salary(commissionRate, totalSales, tipValue):
+    """
+    Calculate the total salary of a barber based on commission rate, total sales, and tips.
+
+    Parameters:
+    commissionRate (float): The commission rate as a decimal (e.g., 0.1 for 10%).
+    totalSales (float): The total sales amount from services provided.
+    tipValue (float): The total tips received by the barber.
+
+    Returns:
+    float: The total salary of the barber.
+    """
+    commission = commissionRate * totalSales
+    total_salary = commission + tipValue
+    return total_salary
+
+# Example usage:
+commissionRate = 0.1       # 10% commission rate, entered as a decimal
+totalSales = 1500.0        # Total amount of services rendered in dollars
+tipValue = 200.0           # Total tips received in dollars
+
+salary = calculate_barber_salary(commissionRate, totalSales, tipValue)
+print(f"The barber's total salary is: ${salary:.2f}")
