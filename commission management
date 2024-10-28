@@ -27,7 +27,7 @@ def main():
 
     # Extract values for the barber
     commission_rate = barber_data['commissionRate'].values[0]
-    hoursWorked = barber_data['hoursWorked'].values[0]
+    hours_worked = barber_data['hoursWorked'].values[0]
     tip_value = barber_data['tipValue'].values[0]
 
     # Prompt for and get the amount of sales
