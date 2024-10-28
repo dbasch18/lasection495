@@ -1,8 +1,18 @@
+def load_data():
+    data = pd.read_csv('/mnt/data/MOCK_DATA.csv')
+    return data
 
+def main():
+    # Load data from CSV
+    data = load_data()
+    
+    commissionRate = data['commissionRate'].iloc[0]
+    hoursWorked = data['hoursWorked'].iloc[0]
+    tipValue = data['tipValue'].iloc[0]
 
 def main():
 	# Get the amount of sales.
-	sales = get_sales()
+	salesValue = get_salesValue()
 
 	# Determine the commission rate.
 	commissionRate = get_commissionRate()
@@ -14,12 +24,12 @@ def main():
 	tipValue = get_tipValue()
 
 	# Calculate total salary
-	salary = sales * commissionRate * hoursWorked + tipValue
+	salary = salesValue * commissionRate * hoursWorked + tipValue
 	
     # Display the amount of pay.
 	print(f"The barber's total salary is: ${salary:.2f}")
 
-def get_sales():
+def get_salesValue():
 	# Get the amount of monthly sales.
 	monthly_sales = float(input('Enter the monthly sales: '))
 
