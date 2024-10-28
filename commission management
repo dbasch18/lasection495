@@ -27,14 +27,14 @@ def main():
 
     # Extract values for the barber
     commission_rate = barber_data['commissionRate'].values[0]
-    hours_worked = barber_data['hoursWorked'].values[0]
+    hoursWorked = barber_data['hoursWorked'].values[0]
     tip_value = barber_data['tipValue'].values[0]
 
     # Prompt for and get the amount of sales
     sales_value = get_sales_value()
 
     # Calculate total salary
-    salary = (sales_value * commission_rate * hours_worked) + tip_value
+    salary = (sales_value * commission_rate) + tip_value + (hoursWorked *10)
 
     # Display the amount of pay
     print(f"The barber's total salary is: ${salary:.2f}")
