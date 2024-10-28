@@ -34,7 +34,7 @@ def main():
     sales_value = get_sales_value()
 
     # Calculate total salary
-    salary = (sales_value * commission_rate) + tip_value + (hoursWorked *10)
+    salary = (sales_value * commission_rate) + tip_value + (hours_worked *10)
 
     # Display the amount of pay
     print(f"The barber's total salary is: ${salary:.2f}")
