@@ -1,23 +1,27 @@
-def calculate_barber_salary(commissionRate, totalSales, tipValue):
-    """
-    Calculate the total salary of a barber based on commission rate, total sales, and tips.
 
-    Parameters:
-    commissionRate (float): The commission rate as a decimal (e.g., 0.1 for 10%).
-    totalSales (float): The total sales amount from services provided.
-    tipValue (float): The total tips received by the barber.
 
-    Returns:
-    float: The total salary of the barber.
-    """
-    commission = commissionRate * totalSales
-    total_salary = commission + tipValue
-    return total_salary
+def main():
+	# Get the amount of sales.
+	sales = get_sales()
 
-# Example usage:
-commissionRate = 0.1       # 10% commission rate, entered as a decimal
-totalSales = 1500.0        # Total amount of services rendered in dollars
-tipValue = 200.0           # Total tips received in dollars
+	# Determine the commission rate.
+	commissionRate = get_commissionRate()
 
-salary = calculate_barber_salary(commissionRate, totalSales, tipValue)
-print(f"The barber's total salary is: ${salary:.2f}")
+    # Get the amount of hours worked.
+	hoursWorked = get_hoursWorked()
+
+    # Get the amount of tips.
+	tipValue = get_tipValue()
+
+	# Calculate total salary
+	salary = sales * commissionRate * hoursWorked + tipValue
+	
+    # Display the amount of pay.
+	print(f"The barber's total salary is: ${salary:.2f}")
+
+def get_sales():
+	# Get the amount of monthly sales.
+	monthly_sales = float(input('Enter the monthly sales: '))
+
+	# Return the amount entered
+	return monthly_sales
