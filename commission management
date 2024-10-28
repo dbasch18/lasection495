@@ -1,3 +1,5 @@
+import pandas as pd
+
 def load_data():
     data = pd.read_csv('/mnt/data/MOCK_DATA.csv')
     return data
